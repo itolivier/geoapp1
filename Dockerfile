@@ -6,10 +6,10 @@ FROM ubuntu:latest
 
 # Install required packages
 RUN apt-get update && \
-    
+    apt-get install -y openjdk-11-jdk
 
 # Set environment variables
-ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.18.0.10-1.el7_9.x86_64
+ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 ENV PATH=$PATH:$JAVA_HOME/bin
 
 # Set working directory
